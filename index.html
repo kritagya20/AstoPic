@@ -11,21 +11,11 @@
     <script type="text/javascript" src="./assets/js/script.js" defer></script>
   </head>
   <body >
-
+    <canvas id="canvas1"></canvas>
     <!-- PRELOADER -->
     <div id="preloader">
       <div id="loader"></div>
     </div>
-
-    <!-- HEADER -->
-    <header id="error-card" class="error-card">
-      <h4 class="card-title">Error</h4>
-      <p class="card-text">It seems there is a network error in fetching the data. Please check your internet connection or try after few moments. </p>
-      <div class="error-btn">
-        <a href="index.html" class="btn">Retry</a>
-        <a href="#" class="btn btn-primary">Home</a>  
-      </div>
-    </header>
 
     <!-- MAIN -->
     <main>
@@ -40,7 +30,7 @@
             <form id="search-form" class="form-element">
               <input type="number" class="form-input" id="date" max="31" min="1" placeholder="DD" required/>          
               <input type="number" class="form-input" id="month" max="12" min="1"placeholder="MM" required/>
-              <input type="number" class="form-input" id="year" max="2022" min="2000"placeholder="YYYY" required/>
+              <input type="number" class="form-input" id="year" max="2022" min="1995"placeholder="YYYY" required/>
               <button id="search-btn"  type = "submit" class="search-btn">
                 <svg class="search-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M20.87,20.17l-5.59-5.59C16.35,13.35,17,11.75,17,10c0-3.87-3.13-7-7-7s-7,3.13-7,7s3.13,7,7,7c1.75,0,3.35-0.65,4.58-1.71 l5.59,5.59L20.87,20.17z M10,16c-3.31,0-6-2.69-6-6s2.69-6,6-6s6,2.69,6,6S13.31,16,10,16z"></path></svg>
               </button>
@@ -49,8 +39,18 @@
         </section>
 
         <!-- SPINNER -->
-        <section id = "spinner">
-        </section>
+        <section id = "spinner"></section>
+
+        <!-- ERROR-DIALOG -->
+        <dialog id="error-dialog" class="error-dialog" role="dialog">
+          <span class="error-card">
+            <h4 class="card-title">Error</h4>
+            <p class="card-text">It seems there is a network error in fetching the data. Please check your internet connection or try after few moments. </p>
+            <form method="dialog" class="error-btn">
+              <button id="retry" class="btn btn-primary">Retry</button>
+            </form>
+          </span>
+        </dialog>
 
         <!-- DATA -->
         <section id="api-data" class="api-data">
@@ -78,7 +78,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-      <small>This app uses the &nbsp; <a href="https://api.nasa.gov" target="_blank" >NASA APOD API </a>  &nbsp; and presents the best astrophotographic photo of NASA resources every day.</small>
+      <small>This website uses the &nbsp; <a href="https://api.nasa.gov" target="_blank" >NASA APOD API </a>  &nbsp; and presents the best astrophotographic photo of NASA resources every day.</small>
     </footer>
   </body>
 </html>
