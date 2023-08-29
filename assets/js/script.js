@@ -1,6 +1,6 @@
 //API KEY AND URL
 const url = "https://api.nasa.gov/planetary/apod?";
-const apiKey = "api_key=oZE6pQiVQIdUnGScbcRkpcIkbi1luROq42MtbL3F";
+const apiKey = "";
 const defaultQuery = url + apiKey ;
 
 //ELEMENTS FOR MANIPULATING THE DOM
